@@ -1,0 +1,12 @@
+# Install PyTorch for your CUDA version first, e.g.:
+#   pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cu128
+# (The official evaluator ran torch 2.2.2+cu121.)
+numpy==1.26.4
+h5py==3.16.0
+# Needed by the organizer starter kits
+scipy==1.15.3
+einops==0.8.1
+pyyaml==6.0.2
+tqdm==4.67.1
+requests==2.32.5
+setuptools==78.1.0  # the kit CNO code imports pkg_resources

@@ -1,0 +1,33 @@
+{
+  "experiment": "package",
+  "seed": 0,
+  "checkpoint": "artifacts/dual_head_fno/fno_dual_head_fp16.pth",
+  "checkpoint_sha256": "REPLACE_WITH_SHA256_OF_YOUR_CHECKPOINT",
+  "wrapper": "submission/submission.py",
+  "decision_criterion": {
+    "extracted_max_bytes": 256000000,
+    "must_contain_root_submission_py": true,
+    "bounds_on_every_step": true,
+    "adapt_loss": null,
+    "skip_validation_proxy": true,
+    "skip_reason": "All valid real trajectories are used for training, so there is no local holdout.",
+    "official_container_local_eval": true,
+    "additional_gate": "scripts/check_deployed_parity.py on the extracted archive; no emaV fallbacks; prediction/bound physical differences <=2e-6"
+  },
+  "adaptation": {
+    "gamma": 0.9,
+    "fluct_mode": "emav",
+    "var_gamma": 0.9,
+    "var_sigma": 0.5,
+    "var_min": 0.2,
+    "var_max": 5.0,
+    "fallback_fluct_scale": 1.5
+  },
+  "interval": {
+    "alpha": 0.02,
+    "beta": 0.14,
+    "sigma_global": 0.0563870259
+  },
+  "output": "artifacts/package",
+  "archive_name": "submission.zip"
+}

@@ -1,0 +1,27 @@
+RealPDE 2026 — My Work on Both Tracks
+Copyright 2026 Pranay Vandanapu
+
+My original code, documentation and artwork are licensed under the MIT License
+(see LICENSE), with the exceptions below.
+
+Two files adapt the FNO implementation from RealPDEBench
+(https://github.com/AI4Science-WestlakeU/RealPDEBench, original FNO by Zongyi Li)
+and are distributed under CC BY-NC 4.0
+(https://creativecommons.org/licenses/by-nc/4.0/), not the MIT License:
+
+  track2-test-time-adaptation/src/realpde_t2/dual_head_fno.py
+  track2-test-time-adaptation/submission/submission.py
+
+Both carry an SPDX header. My changes add separate mean and fluctuation output
+heads, checkpoint conversion and streaming adaptation. The upstream source they
+were compared against is RealPDEBench commit
+62f4c80ab17f78933d046f2b038531dbc6a478a0, realpdebench/model/fno.py.
+
+The license does not cover the competition data, the pretrained baseline
+checkpoints or the organizer starter kits, none of which are included in this
+repository. The code needs them at runtime, and they remain under their own
+terms. RealPDEBench is CC BY-NC 4.0, and the CNO utilities in the Track 1 kit
+derive from NVIDIA code under the StyleGAN3 source license
+(https://github.com/NVlabs/stylegan3/blob/main/LICENSE.txt), which is limited
+to research and evaluation use. Taken together, the full model and data stack
+is not unrestricted MIT software.

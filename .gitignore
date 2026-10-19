@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv*
+
+# Competition data and organizer starter kits (download separately, see each track's USAGE.md)
+RealPDE-Competition-Data
+realpde_t1_starting_kit_*
+realpde_t2_starting_kit_*
+
+# Model weights and generated outputs
+artifacts
+*.pth
+*.pt
+*.h5
+*.npz
+*.zip
